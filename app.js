@@ -1,32 +1,32 @@
-function sayHello(nameOfPerson, age){
-    console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
-}
-sayHello("Mikakoyoo", 10);
-sayHello("Nico", 23);
-sayHello("lynn", 21);
-
-// a, b 대신에 다른 이름 아~무 거나 해도 상관 없음
-function plus(a, b){
-    console.log(a + b);
-}
-plus(8, 60); // 중요한건 8이 a 자리에 있어서 a가 8인 것
-// console.log(a); // a는 function 안에만 존재, 밖에서 하려고 하면 에러
-
-function divide(c, d){
-    console.log(c / d);
-}
-divide(10, 5);
-
-
-// 원래 함수를 쓸 때는 function sayHello 라 했는데,
-//  object 안에서는 위치가 바뀜
 const player = {
-    name: "mikakoyoo",
-    sayHello: function(otherPersonsName){
-        console.log("hello " + otherPersonsName + " nice to meet you!");
-    }
+    name: "Mikakoyoo",
+    age: 93,
+} // object를 만드는 방법
+console.log(player, console); // console 도 object 였다!
+player.name = "Ted" // object를 수정 하는 방법
+console.log(player);
+player.sexy = "soon"; // object에 추가 하는 방법
+console.log(player) ;
+
+
+function plus(potato, salad){ // 함수를 만드는 방법
+    console.log(potato + salad); // function 안에서 data를 받는 방법
+}
+plus(5, 10); // 함수를 실행시키는 방법
+plus(1.32323, 6767.3434); // 순서는 중요, 앞에가 potato, 뒤에가 salad
+plus(); // 함수를 실행시키는 방법
+
+
+function minusFive(potato){ // potato는 {} 안에 있는 바디에서만 작동
+    console.log(potato - 5); //
+}
+minusFive(5, 10, 12, 34); // 아무리 많이 적어도 첫 번째 인수만 가능
+
+
+const calculator = {
+    add: function(a, b){
+        console.log(a + b);
+    },
 };
 
-console.log(player.name);
-player.sayHello("lynn");
-player.sayHello("Nico");
+calculator.add(5, 1);
