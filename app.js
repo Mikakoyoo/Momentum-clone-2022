@@ -1,30 +1,11 @@
-const calculator2 = {
-    plus: function(a, b){
-        console.log(a + b);
-    },
-};
-const plusResult2 = calculator2.plus(2, 3);
-console.log(plusResult2);  // return을 하지 않았기 때문에 undefined
+const age = prompt("How old are you?"); // JS가 코드의 실행을 멈춤 그래서 prompt는 안씀.
+// 답을 하고 나야 아래 콘솔이 실행이 됨
+
+console.log(age, parseInt(age));
+console.log(typeof "15", typeof parseInt("15"));
 
 
-const calculator = {
-    plus: function(a, b){
-        console.log("hello"); // hello는 return 전이라 출력
-        return a + b;
-        console.log("bye"); // 한번 return하면 함수는 종료, 그래서 출력 안됨
-    },
-    minus: function(a, b){
-        return a - b;
-    },
-    times: function(a, b){
-        return a * b;
-    },
-    divide: function(a, b){
-        return a / b;
-    },
-    power: function(a, b){
-        return a**b;
-    },
-};
-const plusResult = calculator.plus(2, 3);
-console.log(plusResult);
+const age2 = parseInt(prompt("How old are you?")); // JS가 코드의 실행을 멈춤 그래서 prompt는 안씀.
+// 답을 하고 나야 아래 콘솔이 실행이 됨
+
+console.log(age2);
