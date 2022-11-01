@@ -1,6 +1,6 @@
-const title = document.getElementById("title");
+const title = document.querySelector(".hello h1");
+// const title = document.querySelector("#hello form");
+// const title = document.querySelectorAll(".hello h1");
+// const title = document.getElementById("hello");
 
-title.innerText = "Got you!";
-
-console.log(title.id);
-console.log(title.className);
+console.log(title);
