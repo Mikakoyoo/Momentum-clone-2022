@@ -4,6 +4,8 @@ const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
 
+const link = document.querySelector("a");
+
 function onLoginSubmit(event) {
   event.preventDefault();
   loginForm.classList.add(HIDDEN_CLASSNAME);
@@ -14,4 +16,10 @@ function onLoginSubmit(event) {
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
+function handleLinkClick(event) {
+  event.preventDefault();
+  console.dir(event);
+}
+
 loginForm.addEventListener("submit", onLoginSubmit);
+link.addEventListener("click", handleLinkClick);
