@@ -1,21 +1,13 @@
-// const h1 = document.querySelector("div.hello:first-child h1");
+const loginForm = document.getElementById("login-form");
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
 
-// function handTitleClick() {
-//   const clickedClass = "clicked";
-//   if (h1.classList.contains(clickedClass)) {
-//     h1.classList.remove(clickedClass);
-//   } else {
-//     h1.classList.add(clickedClass);
-//   }
-// }
+// 위에 코드와 아래 코드는 같은 것
+// const loginInput = document.querySelector("#login-form input");
+// const loginButton = document.querySelector("#login-form button");
 
-// h1.addEventListener("click", handTitleClick);
-//위에 코드는 toggle로 줄일 수 있음
-
-const h1 = document.querySelector("div.hello:first-child h1");
-
-function handTitleClick() {
-  h1.classList.toggle("clicked");
+function onLoginBtnClick() {
+  console.log("hello", loginInput.value);
 }
 
-h1.addEventListener("click", handTitleClick);
+loginButton.addEventListener("click", onLoginBtnClick);
