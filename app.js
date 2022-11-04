@@ -1,41 +1,17 @@
-const loginForm = document.getElementById("login-form");
-const loginInput = loginForm.querySelector("input");
-const loginButton = loginForm.querySelector("button");
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
-<<<<<<< HEAD
-const link = document.querySelector("a");
+const HIDDEN_CLASSNAME = "hidden";
 
 function onLoginSubmit(event) {
   event.preventDefault();
-  console.log(loginInput.value);
-}
-
-function handleLinkClick(event) {
-  event.preventDefault();
-  console.dir(event);
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  const username = loginInput.value;
+  // greeting.innerText = "Hello " + username;
+  // 아래와 같은 것, 다른 표기 방식
+  greeting.innerText = `Hello ${username}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
 loginForm.addEventListener("submit", onLoginSubmit);
-link.addEventListener("click", handleLinkClick);
-=======
-// 위에 코드와 아래 코드는 같은 것
-// const loginInput = document.querySelector("#login-form input");
-// const loginButton = document.querySelector("#login-form button");
-
-// function onLoginBtnClick() {
-//   const username = loginInput.value;
-//   if (username === "") {
-//     alert("please write your name");
-//   } else if (username.length > 15) {
-//     alert("your name is too long.");
-//   }
-// }
-// loginButton.addEventListener("click", onLoginBtnClick);
-
-function onLoginBtnClick() {
-  const username = loginInput.value;
-  console.log(username);
-}
-
-loginButton.addEventListener("click", onLoginBtnClick);
->>>>>>> parent of d67bb1d (#4.1 Form Submission)
