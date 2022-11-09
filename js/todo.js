@@ -2,12 +2,22 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input"); // 괄호 안에 (input) 이렇게 하는 거랑 같음
 const toDoList = document.getElementById("todo-list");
 
+function deleteToDo(event) {
+  const li = event.target.parentElement;
+  li.remove();
+}
+
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   const span = document.createElement("span");
-  li.appendChild(span);
   span.innerText = newTodo;
+  const button = document.createElement("button");
+  button.innerText = "❌";
+  button.addEventListener("click", deleteToDo);
+  li.appendChild(span);
+  li.appendChild(button);
   toDoList.appendChild(li);
+  //appendchild의 코드는 제일 마지막에 있어야 함
 }
 
 function handleToDoSubmit(event) {
