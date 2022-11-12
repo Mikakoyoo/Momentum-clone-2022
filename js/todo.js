@@ -45,10 +45,6 @@ function handleToDoSubmit(event) {
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-// function sayHello(item) {
-//   console.log("this is the turn off", item);
-// } 50번째 줄에 표현한 화살표함수(arrow function)와 같음
-
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if (savedToDos !== null) {
@@ -56,3 +52,7 @@ if (savedToDos !== null) {
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
 }
+
+function sexyFilter() {}
+
+[1, 2, 3, 4].filter(sexyFilter);
